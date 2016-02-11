@@ -29,7 +29,7 @@ const JS_LOADER = {
 
 export default {
   entry: {
-    app: [
+    example: [
       ...(WATCH ? ['webpack-hot-middleware/client'] : []),
       './src/index.js',
     ],
@@ -86,7 +86,7 @@ export default {
         test: /\.jsx?$/,
         include: [
           path.resolve(__dirname, '../src'),
-          path.resolve(__dirname, '../examples'),
+          path.resolve(__dirname, '../node_modules/worker-as-a-promise'),
         ],
         loader: 'babel-loader',
       },

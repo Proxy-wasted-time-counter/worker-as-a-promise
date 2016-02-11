@@ -1,4 +1,4 @@
-import { decorateWorker } from '../src';
+import { decorateWorker } from 'worker-as-a-promise';
 
 import EchoWorker from 'worker!./echo-worker';
 

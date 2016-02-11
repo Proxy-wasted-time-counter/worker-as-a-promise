@@ -12,7 +12,7 @@ async function copy() {
   const ncp = Promise.promisify(require('ncp'));
 
   const watchedPaths = new Map([
-    ['package.json', 'build/package.json',],
+    ['src/index.html', 'build/index.html'],
   ]);
   const promises = [];
   watchedPaths.forEach((dest, source) => {
@@ -20,14 +20,6 @@ async function copy() {
     promises.push(ncp(source, dest).catch(e => console.error(e)));
   });
   await Promise.all(promises);
-
-  replace({
-    regex: '"start".*',
-    replacement: '"start": "node server.js"',
-    paths: ['build/package.json'],
-    recursive: false,
-    silent: false,
-  });
 
   if (global.WATCH) {
     const watchPattern = Array.from(watchedPaths.keys());

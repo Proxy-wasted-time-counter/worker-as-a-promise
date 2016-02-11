@@ -1,4 +1,4 @@
-import { isMessageAsPromised, getMessage, createResponse, createError } from '../src';
+import { isMessageAsPromised, getMessage, createResponse, createError } from 'worker-as-a-promise';
 
 self.addEventListener('message', m => {
   if (isMessageAsPromised(m)) {

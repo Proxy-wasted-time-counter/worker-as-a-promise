@@ -29,7 +29,7 @@ const JS_LOADER = {
 
 export default {
   entry: {
-    app: [
+    index: [
       ...(WATCH ? ['webpack-hot-middleware/client'] : []),
       './src/index.js',
     ],

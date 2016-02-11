@@ -86,7 +86,6 @@ export default {
         test: /\.jsx?$/,
         include: [
           path.resolve(__dirname, '../src'),
-          path.resolve(__dirname, '../node_modules/worker-as-a-promise'),
         ],
         loader: 'babel-loader',
       },

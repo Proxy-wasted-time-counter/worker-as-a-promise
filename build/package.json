@@ -1,10 +1,10 @@
 {
-  "name": "worker-as-a-promise-example",
-  "version": "0.0.3",
+  "name": "worker-as-a-promise",
+  "version": "0.0.2",
   "description": "",
-  "main": "src/index.js",
+  "main": "build/index.js",
   "scripts": {
-    "start": "babel-node tools/run start",
+    "start": "node server.js"
     "build": "babel-node tools/run build"
   },
   "repository": {
@@ -12,7 +12,8 @@
     "url": "git+https://github.com/Proxy-wasted-time-counter/worker-as-a-promise.git"
   },
   "keywords": [
-    "webworker"
+    "webworker",
+    "promise"
   ],
   "author": "Kevin Pennarun <kevin.pennarun@gmail.com> (http://kevin-pennarun.org)",
   "license": "ISC",
@@ -21,7 +22,8 @@
   },
   "homepage": "https://github.com/Proxy-wasted-time-counter/worker-as-a-promise#readme",
   "dependencies": {
-    "worker-as-a-promise": "0.0.3"
+    "node-uuid": "^1.4.7",
+    "pseudo-worker": "^1.0.2"
   },
   "devDependencies": {
     "babel": "^6.3.26",

@@ -1,11 +1,14 @@
 {
   "name": "worker-as-a-promise",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "",
-  "main": "build/index.js",
+  "main": "lib/index.js",
+  "jsnext:main": "es/index.js",
   "scripts": {
     "start": "node server.js"
-    "build": "babel-node tools/run build"
+    "build:umd": "babel-node tools/run build",
+    "build:commonjs": "babel src --out-dir lib",
+    "build": "npm run build:umd && npm run build:commonjs"
   },
   "repository": {
     "type": "git",

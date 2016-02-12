@@ -84,9 +84,8 @@ export default {
     loaders: [
       {
         test: /\.jsx?$/,
-        include: [
-          path.resolve(__dirname, '../src'),
-        ],
+        exclude: /node_modules/,
+        include: path.resolve(__dirname, '../src'),
         loader: 'babel-loader',
       },
       {

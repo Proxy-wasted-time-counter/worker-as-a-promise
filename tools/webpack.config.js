@@ -29,7 +29,7 @@ const JS_LOADER = {
 
 export default {
   entry: {
-    index: [
+    'worker-as-a-promise': [
       ...(WATCH ? ['webpack-hot-middleware/client'] : []),
       './src/index.js',
     ],

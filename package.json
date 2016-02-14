@@ -1,7 +1,7 @@
 {
   "name": "worker-as-a-promise",
   "version": "0.0.5",
-  "description": "",
+  "description": "A WebWorker enhancer for communicate through a classical asynchronous promised base interface",
   "main": "lib/index.js",
   "jsnext:main": "es/index.js",
   "scripts": {
